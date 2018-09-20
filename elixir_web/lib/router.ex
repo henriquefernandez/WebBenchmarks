@@ -9,7 +9,7 @@ defmodule Router do
     text = 
       Enum.reduce(10000..1, "", 
         fn i, acc -> 
-          Integer.to_string(i) <> acc 
+          acc <> Integer.to_string(i) 
         end)
 
     send_resp(conn, 200, text)
@@ -19,7 +19,7 @@ defmodule Router do
     text = 
       Enum.reduce(1000..1, "", 
         fn i, acc -> 
-          Integer.to_string(i) <> acc 
+          acc <> Integer.to_string(i) 
         end)
 
     send_resp(conn, 200, text)
@@ -29,7 +29,7 @@ defmodule Router do
     text = 
       Enum.reduce(100..1, "", 
         fn i, acc -> 
-          Integer.to_string(i) <> acc 
+          acc <> Integer.to_string(i)
         end)
 
     send_resp(conn, 200, text)
