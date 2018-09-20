@@ -8,6 +8,11 @@ app.get('/hello', function (req, res) {
   res.send(text)
 })
 
+app.get('/', function (req, res) {
+  res.json({"text":"benchmark"})
+})
+
+
 app.listen(5000, function () {
   console.log('Example app listening on port 5000!')
 })

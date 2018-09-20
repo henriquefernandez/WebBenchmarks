@@ -10,11 +10,11 @@ use Mix.Config
 
 # You can configure your application as:
 #
-#     config :benchmarking, key: :value
+#     config :elixir_web, key: :value
 #
 # and access this configuration in your application as:
 #
-#     Application.get_env(:benchmarking, :key)
+#     Application.get_env(:elixir_web, :key)
 #
 # You can also configure a 3rd-party app:
 #

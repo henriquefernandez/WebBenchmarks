@@ -1,5 +1,6 @@
-defmodule AppRouter do
+defmodule Router do
   use Plug.Router
+  import Poison
 
   plug :match
   plug :dispatch
@@ -12,6 +13,10 @@ defmodule AppRouter do
         end)
 
     send_resp(conn, 200, text)
+  end
+
+  get "/" do
+    send_resp(conn, 200, Poison.encode!(%{text: "benchmark"}))
   end
 
   match _ do
