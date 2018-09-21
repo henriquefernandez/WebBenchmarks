@@ -7,7 +7,7 @@ defmodule Router do
 
   get "/10000" do
     text = 
-      Enum.reduce(10000..1, "", 
+      Enum.reduce(1..10000, "", 
         fn i, acc -> 
           acc <> Integer.to_string(i) 
         end)
@@ -17,7 +17,7 @@ defmodule Router do
 
   get "/1000" do
     text = 
-      Enum.reduce(1000..1, "", 
+      Enum.reduce(1..10000, "", 
         fn i, acc -> 
           acc <> Integer.to_string(i) 
         end)
@@ -27,7 +27,7 @@ defmodule Router do
 
   get "/100" do
     text = 
-      Enum.reduce(100..1, "", 
+      Enum.reduce(1..10000, "", 
         fn i, acc -> 
           acc <> Integer.to_string(i)
         end)
