@@ -3,4 +3,4 @@ module Main where
 import Happstack.Server (nullConf, simpleHTTP, toResponse, ok)
 
 main :: IO ()
-main = simpleHTTP nullConf $ ok (toResponse "Hello, World!")
+main = simpleHTTP nullConf $ ok (toResponse "{\"text\": \"benchmark\"}")
