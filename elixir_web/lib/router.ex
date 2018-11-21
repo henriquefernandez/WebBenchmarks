@@ -1,6 +1,5 @@
 defmodule Router do
   use Plug.Router
-  import Poison
 
   plug :match
   plug :dispatch
