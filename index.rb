@@ -25,6 +25,7 @@ get '/100' do
   text
 end
 
-get '/' do
+post '/' do
+  puts params.inspect
   {text: 'benckmark'}.to_json
 end

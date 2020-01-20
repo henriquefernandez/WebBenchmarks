@@ -6,6 +6,7 @@ import (
 		"log"
 		"encoding/json"
     "net/http"
+    "time"
 )
 
 type Benchmark struct {
@@ -24,8 +25,14 @@ func index(w http.ResponseWriter, r *http.Request) {
   json.NewEncoder(w).Encode(Benchmark { Text: "benchmark" })
 }
 
+func sleep_test(w http.ResponseWriter, r *http.Request) {
+  time.Sleep(5 * time.Second)
+  json.NewEncoder(w).Encode(Benchmark { Text: "benchmark" })
+}
+
 func main() {
     http.HandleFunc("/", index)
     http.HandleFunc("/10000", test_1)
+    http.HandleFunc("/sleep", sleep_test)
     log.Fatal(http.ListenAndServe(":8080", nil))
 }

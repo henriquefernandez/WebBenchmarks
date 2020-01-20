@@ -4,6 +4,12 @@ defmodule Router do
   plug :match
   plug :dispatch
 
+  get "/sleep" do
+    Process.sleep(5000)
+
+    send_resp(conn, 200, "")
+  end
+
   get "/10000" do
     text =
       Enum.reduce(1..10000, "",
